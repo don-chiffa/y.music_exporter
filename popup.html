@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Y. Music Exporter</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <!-- закругляем именно контейнер #app -->
+  <div id="app">
+    <header>
+      <h1>Y. Music Exporter</h1>
+      <span id="count-badge" class="badge">0</span>
+    </header>
+
+    <main>
+      <!-- карточка запроса прав -->
+      <section id="grant-card" class="card" hidden>
+        <h2>Дать доступ к music.yandex.ru</h2>
+        <p>Нужно разрешение, чтобы читать список треков на странице.</p>
+        <button id="grant">Выдать доступ</button>
+      </section>
+
+      <!-- подсказка после выдачи прав -->
+      <div id="hint" class="hint" hidden>
+        Тщательно и не спеша проскрольте плейлист, чтобы собрать все треки.
+      </div>
+
+      <!-- список треков -->
+      <section id="list-card" class="card" hidden>
+        <div id="empty" class="empty">Загрузите страницу плейлиста и слегка проскрольте вниз.</div>
+        <div id="list"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="actions">
+        <button id="exportTxt" disabled>Экспорт TXT</button>
+        <button id="exportTsv" disabled class="primary">Экспорт TSV</button>
+      </div>
+    
+    </footer>
+
+    <!-- баннер поддержки без крестика -->
+    <div id="support" class="support" hidden>
+      <div>Готово! Если плагин полезен — можно поддержать проект 🙌</div>
+      <a id="support-link" href="https://your-site-or-github.io/donate" target="_blank" rel="noopener" class="support-btn">Поддержать</a>
+    </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+# виртуальные окружения
+.venv/
+venv/
+env/
+
+# системные файлы IDE/OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# архивы / временные файлы
+*.zip
+*.tar
+*.gz
+*.log
+*.tmp
+
+# кэш Node/Python
+node_modules/
+__pycache__/
+
+# изображения и исходники дизайна
+*.psd
+*.xcf
+*.ai
+*.png
+*.jpg
+*.jpeg
+
+# скриншоты
+Screenshot*.png
+Screenshot*.jpg
