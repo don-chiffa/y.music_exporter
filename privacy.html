@@ -1,17 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <title>Privacy Policy — Y. Music Exporter</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <style>
+    :root{
+      --bg:#ffffff;--fg:#1f2328;--muted:#666;--line:#e6e6e6;--ok:#0b6;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{--bg:#0f1115;--fg:#e6edf3;--muted:#9aa7b2;--line:#202635;}
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial;}
+    .wrap{max-width:860px;margin:40px auto;padding:0 20px}
+    h1{font-size:28px;margin:0 0 8px}
+    h2{font-size:18px;margin:28px 0 8px}
+    p,li{margin:10px 0}
+    .muted{color:var(--muted)}
+    .card{border:1px solid var(--line);border-radius:12px;padding:16px;margin-top:16px}
+    code{padding:2px 6px;border:1px solid var(--line);border-radius:6px;background:rgba(127,127,127,.07)}
+    a{color:var(--ok);text-decoration:none}
+  </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p>This extension works entirely locally in your browser.</p>
-  <ul>
-    <li>We do not collect, store, or transmit any personal data.</li>
-    <li>No information is sent to external servers.</li>
-    <li>All processing happens on the user's device.</li>
-  </ul>
-  <p>If you have any questions, you can contact us at: <em>your_email@example.com</em></p>
+  <div class="wrap">
+    <h1>Privacy Policy</h1>
+    <p class="muted">Last updated: <strong>2025-09-30</strong></p>
+
+    <div class="card">
+      <p><strong>Y. Music Exporter</strong> is a browser extension that exports visible track lists from
+        <code>music.yandex.ru</code> to local files. The extension works entirely on the user’s device.
+        We do not collect, store, sell, or transmit any personal data.</p>
+    </div>
+
+    <h2>Data collection & transfer</h2>
+    <ul>
+      <li>No data is sent to external servers or third parties.</li>
+      <li>No analytics, telemetry, ads, or profiling.</li>
+      <li>Track information is read from the currently open page solely to generate your export file.</li>
+    </ul>
+
+    <h2>Permissions explained</h2>
+    <ul>
+      <li><strong>Host permissions</strong> (<code>https://music.yandex.ru/*</code>): required to read visible track items on that site only.</li>
+      <li><strong>activeTab</strong>/<strong>tabs</strong>: used to address the current tab and communicate with the content script. No browsing history is accessed.</li>
+      <li><strong>scripting</strong>: injects a bundled content script to parse the page. No <em>eval</em>, no remote scripts.</li>
+      <li><strong>storage</strong>: keeps temporary in-extension state (e.g., list before export). Nothing is persisted after the session.</li>
+      <li><strong>downloads</strong>: saves TXT/TSV files locally when you click “Export”.</li>
+    </ul>
+
+    <h2>Remote code</h2>
+    <p>The extension does <strong>not</strong> use remote code or load external JavaScript/Wasm. All code ships within the package.</p>
+
+    <h2>Children’s privacy</h2>
+    <p>This extension does not target children and does not process personal data.</p>
+
+    <h2>Third parties</h2>
+    <p>No third-party services are integrated. Exported files stay on your device.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If the policy changes, we will update the “Last updated” date above. Substantive changes will be reflected in the published version of the extension and this page.</p>
+
+    <h2>Contact</h2>
+    <p>If you have questions, contact: <a href="mailto:don.chiffa@gmail.com">don.chiffa@gmail.com</a></p>
+
+    <p class="muted" style="margin-top:24px">
+      Disclaimer: this is an independent project and is not affiliated with Yandex or Yandex.Music.
+    </p>
+  </div>
 </body>
 </html>
