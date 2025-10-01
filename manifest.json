@@ -2,14 +2,14 @@
   "manifest_version": 3,
   "name": "Y. Music Exporter",
   "short_name": "Y.Music",
-  "version": "1.2.2",
+  "version": "1.1.4",
   "description": "Неофициальный инструмент для личного бэкапа списков треков. Работает локально на страницах music.yandex.ru.",
-  "background": { "service_worker": "service_worker.js" },
-  "permissions": ["tabs", "scripting", "storage", "downloads", "activeTab"],
-  "optional_host_permissions": [
-    "https://music.yandex.ru/*",
-    "https://music.yandex.ru/iframe/*"
-  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
   "action": {
     "default_title": "Y. Music Exporter",
     "default_popup": "popup.html",
@@ -20,11 +20,18 @@
       "128": "icons/icon128.png"
     }
   },
-  "icons": {
-    "16": "icons/icon16.png",
-    "32": "icons/icon32.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
-  },
+  "background": { "service_worker": "service_worker.js" },
+
+  "permissions": [
+    "tabs",
+    "scripting",
+    "downloads"
+  ],
+
+  "optional_host_permissions": [
+    "https://music.yandex.ru/*",
+    "https://music.yandex.ru/iframe/*"
+  ],
+
   "minimum_chrome_version": "104"
 }
